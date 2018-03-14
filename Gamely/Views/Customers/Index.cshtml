@@ -11,12 +11,21 @@
 
 <table id="customers" class="table table-bordered table-hover">
     <thead>
+        <tr>
+            <th>Customer</th>
+            <th>Discount Rate</th>
+            <th>Subscription Type</th>
+        </tr>
+    </thead>
+    <tbody>
         @foreach (var customer in Model)
         {
-                <tr>
-                    <td>@Html.ActionLink(customer.Name, "Details","Customers",new { id = customer.Id },null) </td>
-                </tr>
+            <tr>
+                <td>@Html.ActionLink(customer.Name, "Details", "Customers", new { id = customer.Id }, null) </td>
+                <td>@customer.MembershipType.DiscountRate%</td>
+                <td>@customer.MembershipType.Name</td>
+            </tr>
         }
-    </thead>
-    <tbody></tbody>
+
+    </tbody>
 </table>

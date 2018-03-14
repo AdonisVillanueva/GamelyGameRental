@@ -204,10 +204,35 @@
     <Compile Include="Migrations\201803122244402_datannotations.Designer.cs">
       <DependentUpon>201803122244402_datannotations.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201803140037439_AddNameMembershipType.cs" />
+    <Compile Include="Migrations\201803140037439_AddNameMembershipType.Designer.cs">
+      <DependentUpon>201803140037439_AddNameMembershipType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803140046515_CustomerBday.cs" />
+    <Compile Include="Migrations\201803140046515_CustomerBday.Designer.cs">
+      <DependentUpon>201803140046515_CustomerBday.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803140051342_UpdateBDay.cs" />
+    <Compile Include="Migrations\201803140051342_UpdateBDay.Designer.cs">
+      <DependentUpon>201803140051342_UpdateBDay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803140100317_a.cs" />
+    <Compile Include="Migrations\201803140100317_a.Designer.cs">
+      <DependentUpon>201803140100317_a.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803140106098_GameTableModified.cs" />
+    <Compile Include="Migrations\201803140106098_GameTableModified.Designer.cs">
+      <DependentUpon>201803140106098_GameTableModified.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803140125170_Genre.cs" />
+    <Compile Include="Migrations\201803140125170_Genre.Designer.cs">
+      <DependentUpon>201803140125170_Genre.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\Game.cs" />
+    <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\MembershipType.cs" />
@@ -322,6 +347,7 @@
     <Content Include="Scripts\popper-utils.js.map" />
     <Content Include="Views\Customers\Index.cshtml" />
     <Content Include="Views\Customers\Details.cshtml" />
+    <Content Include="Views\Games\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -344,6 +370,24 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201803122244402_datannotations.resx">
       <DependentUpon>201803122244402_datannotations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803140037439_AddNameMembershipType.resx">
+      <DependentUpon>201803140037439_AddNameMembershipType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803140046515_CustomerBday.resx">
+      <DependentUpon>201803140046515_CustomerBday.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803140051342_UpdateBDay.resx">
+      <DependentUpon>201803140051342_UpdateBDay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803140100317_a.resx">
+      <DependentUpon>201803140100317_a.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803140106098_GameTableModified.resx">
+      <DependentUpon>201803140106098_GameTableModified.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803140125170_Genre.resx">
+      <DependentUpon>201803140125170_Genre.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
