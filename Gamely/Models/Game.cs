@@ -6,12 +6,13 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Gamely.Models
 {
-    public class Game
-    {
-        public int Id { get; set; }
+	public class Game
+	{
+		public int Id { get; set; }
 
 		[Required]
-        public string Name { get; set; }
+		[StringLength(255)]
+		public string Name { get; set; }
 
 		public Genre Genre { get; set; }
 
@@ -22,11 +23,14 @@ namespace Gamely.Models
 		[Display(Name = "Date Added")]
 		public DateTime? DateAdded { get; set; }
 
-		[Display (Name = "Date Released")]
+		[Display(Name = "Date Released")]
 		public DateTime? ReleaseDate { get; set; }
 
-		[Display (Name = "Number in Stock")]
-		public int Stock { get; set; }
+		[Display(Name = "Number in Stock")]
+		[Range(1, 20)]
+		public byte NumberInStock { get; set; }
 
-    }
+		public byte NumberAvailable { get; set; }
+
+	}
 }

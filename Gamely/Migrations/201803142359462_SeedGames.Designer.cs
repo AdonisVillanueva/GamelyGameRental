@@ -7,13 +7,13 @@ namespace Gamely.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class a : IMigrationMetadata
+    public sealed partial class SeedGames : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(a));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(SeedGames));
         
         string IMigrationMetadata.Id
         {
-            get { return "201803140100317_a"; }
+            get { return "201803142359462_SeedGames"; }
         }
         
         string IMigrationMetadata.Source

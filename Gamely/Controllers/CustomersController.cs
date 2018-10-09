@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Gamely.Models;
+using Gamely.ViewModels;
 
 namespace Gamely.Controllers
 {
@@ -37,5 +38,15 @@ namespace Gamely.Controllers
 
              return View(customer);
         }
+
+		public ActionResult New()
+		{
+			var membershipTypes = _context.MembershipTypes.ToList();
+			var viewModel = new NewCustomerViewModel
+			{
+				MembershipTypes = membershipTypes
+			};
+			return View(viewModel);
+		}
 }
 }

@@ -10,6 +10,18 @@ namespace Gamely.Controllers
 {
     public class GamesController : Controller
     {
+		private ApplicationDbContext _context;
+
+		public GamesController()
+		{
+			_context = new ApplicationDbContext();
+		}
+
+		protected override void Dispose(bool disposing)
+		{
+			_context.Dispose();
+		}
+
 		public ActionResult Details(int id)
 		{
 			var Game = _context.Games.Include(m => m.Genre).SingleOrDefault(m => m.Id == id);
@@ -25,13 +37,6 @@ namespace Gamely.Controllers
 		public ActionResult Random()
         {
             var game = new Game() { Name = "Final Fantasy X" };
-
-            // return View(game);
-            // return Content("Hello World");
-            // return EmptyResult();
-            // return HttpNotFound();
-            //return RedirectToAction("Index", "Home", new { page = 1, sortby = "name" });
-            //ViewData["Game"] = game;
 
             //ViewBag.Game = game;
             var customers = new List<Customer>
@@ -49,19 +54,7 @@ namespace Gamely.Controllers
             return View(viewModel);
            
 
-        }
-
-		private ApplicationDbContext _context;
-
-		public GamesController()
-		{
-			_context = new ApplicationDbContext();
-		}
-
-		protected override void Dispose(bool disposing)
-		{
-			_context.Dispose();
-		}
+        }		
 
 		public ViewResult Index()
 		{
